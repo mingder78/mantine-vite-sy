@@ -1,24 +1,16 @@
 import { AppShell, Burger, Group, NavLink, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { useMediaQuery } from '@mantine/hooks';
 import { Routes, Route } from "react-router-dom";
-import { NavLink as MantineNavLink } from "@mantine/core";
+
 import { NavLink as RouterNavLink } from "react-router-dom";
-import { useEffect } from "react";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
-import { useMediaQuery } from "@mantine/hooks";
 
 export default function App() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
-  console.log("isMobile:", isMobile);
-
-  const [opened, { toggle }] = useDisclosure(false);
-  useEffect(() => {
-    console.log("Burger opened:", opened);
-  }, [opened]);
-
+  const [opened, { toggle, close }] = useDisclosure(false);
+const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <AppShell
       header={{ height: 60 }}
@@ -39,18 +31,25 @@ export default function App() {
 
       {/* Sidebar */}
       <AppShell.Navbar p="md">
-        <MantineNavLink component={RouterNavLink} to="/" label="Home" />
+        <NavLink
+          component={RouterNavLink}
+          to="/"
+          label="Home"
+          onClick={() => isMobile && close()}
+        />
 
-        <MantineNavLink
+        <NavLink
           component={RouterNavLink}
           to="/dashboard"
           label="Dashboard"
+          onClick={() => isMobile && close()}
         />
 
-        <MantineNavLink
+        <NavLink
           component={RouterNavLink}
           to="/settings"
           label="Settings"
+          onClick={() => isMobile && close()}
         />
       </AppShell.Navbar>
 
