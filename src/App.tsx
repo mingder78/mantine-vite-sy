@@ -7,6 +7,8 @@ import { NavLink as RouterNavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
+import Rings from "./pages/Rings";
+import WritingBodyMovingStrokes from "./pages/Writing-Body-Moving-Strokes"
 
 export default function App() {
   const [opened, { toggle, close }] = useDisclosure(false);
@@ -25,7 +27,7 @@ const isMobile = useMediaQuery('(max-width: 768px)');
       <AppShell.Header>
         <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Text fw={600}>My App</Text>
+          <Text fw={600}>WANG, SZU-YI  王 思 懿  </Text>
         </Group>
       </AppShell.Header>
 
@@ -35,6 +37,20 @@ const isMobile = useMediaQuery('(max-width: 768px)');
           component={RouterNavLink}
           to="/"
           label="Home"
+          onClick={() => isMobile && close()}
+        />
+
+                   <NavLink
+          component={RouterNavLink}
+          to="/writing-Body-Moving-Strokes"
+          label="Writing Body Moving Strokes"
+          onClick={() => isMobile && close()}
+        />
+
+                <NavLink
+          component={RouterNavLink}
+          to="/Rings"
+          label="Rings"
           onClick={() => isMobile && close()}
         />
 
@@ -57,6 +73,8 @@ const isMobile = useMediaQuery('(max-width: 768px)');
       <AppShell.Main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/rings" element={<Rings />} />
+          <Route path="/writing-Body-Moving-Strokes" element={<WritingBodyMovingStrokes />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
