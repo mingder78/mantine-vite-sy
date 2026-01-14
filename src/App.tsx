@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
 import Rings from "./pages/Rings";
 import WritingBodyMovingStrokes from "./pages/Writing-Body-Moving-Strokes"
+import SeedingHerFeet from "./pages/Seeding-Her-Feet"
 
 export default function App() {
   const [opened, { toggle, close }] = useDisclosure(false);
@@ -43,10 +44,17 @@ const isMobile = useMediaQuery('(max-width: 768px)');
                    <NavLink
           component={RouterNavLink}
           to="/writing-Body-Moving-Strokes"
-          label="Writing Body Moving Strokes"
+          label="書寫身體 風動筆畫"
           onClick={() => isMobile && close()}
         />
 
+
+           <NavLink
+          component={RouterNavLink}
+          to="/seeding-Her-Feet"
+          label="Seeding Her Feet"
+          onClick={() => isMobile && close()}
+        />
                 <NavLink
           component={RouterNavLink}
           to="/Rings"
@@ -73,8 +81,10 @@ const isMobile = useMediaQuery('(max-width: 768px)');
       <AppShell.Main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/rings" element={<Rings />} />
+        
           <Route path="/writing-Body-Moving-Strokes" element={<WritingBodyMovingStrokes />} />
+            <Route path="/seeding-Her-Feet" element={<SeedingHerFeet />} />
+            <Route path="/rings" element={<Rings />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
