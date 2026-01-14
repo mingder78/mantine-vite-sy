@@ -1,19 +1,15 @@
-import { BackgroundImage, Center, Text, Box } from '@mantine/core';
+import { BackgroundImage, Center, Text, Box } from "@mantine/core";
 
 export default function Dashboard() {
   return (
-    <Box maw={300} mx="auto">
-      <BackgroundImage
-        src="/x.jpg"
-        radius="sm"
-      >
-        <Center p="md">
-          <Text c="white">
-            BackgroundImage component can be used to add any content on image. It is useful for hero
-            headers and other similar sections
-          </Text>
-        </Center>
-      </BackgroundImage>
-    </Box>
+    <BackgroundImage src="/x.jpg" radius="sm">
+      <Center p="md">
+        <Text c="white">
+          — Unfold the sensibility between light and shadow, breathe beneath
+          water and air, sink into tranquility and ambience, and wander along
+          with architecture and poetry.
+        </Text>
+      </Center>
+    </BackgroundImage>
   );
 }

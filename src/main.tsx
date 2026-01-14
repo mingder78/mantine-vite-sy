@@ -28,7 +28,24 @@ const theme = createTheme({
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-     <MantineProvider theme={theme}>
+     
+      <MantineProvider theme={theme}>
+      {/* Full screen wrapper with background */}
+     <div
+        style={{
+          position: 'fixed',      // cover entire window
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          backgroundImage: `url("/x.jpg")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: -1,             // behind all content
+          transition: 'background-image 1s ease-in-out',
+        }}
+      />
         <App />
       </MantineProvider>
     </BrowserRouter>
