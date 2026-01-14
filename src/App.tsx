@@ -33,7 +33,7 @@ const isMobile = useMediaQuery('(max-width: 768px)');
       </AppShell.Header>
 
       {/* Sidebar */}
-      <AppShell.Navbar p="md">
+      <AppShell.Navbar p="md" style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}>
         <NavLink
           component={RouterNavLink}
           to="/"
