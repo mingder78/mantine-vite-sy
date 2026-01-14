@@ -1,7 +1,5 @@
-import React from "react";
 import { useState, useEffect } from "react";
-import { MantineProvider, Center, Text, Box, SimpleGrid } from "@mantine/core";
-import { BrowserRouter } from "react-router-dom";
+import { Center, Text, Box} from "@mantine/core";
 
 const images = ["/x.jpg", "/y.jpg", "/z.jpg"];
 

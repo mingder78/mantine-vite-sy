@@ -1,7 +1,9 @@
 import { SimpleGrid, Stack, Box, Text, Title } from "@mantine/core";
+import GalleryWithModal from "./GalleryWithModal";
 
 export default function WritingBodyMovingStrokes() {
   return (
+    <>
     <SimpleGrid cols={{base: 1, sm: 2}} spacing="xl" verticalSpacing="xl">
       <div>
         <Box>
@@ -75,5 +77,7 @@ export default function WritingBodyMovingStrokes() {
         </Box>
       </div>
     </SimpleGrid>
+    <GalleryWithModal/>
+    </>
   );
 }
