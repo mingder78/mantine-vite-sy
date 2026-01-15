@@ -1,4 +1,4 @@
-import { BackgroundImage, Center, Text, Box } from "@mantine/core";
+import { BackgroundImage, Center, Text } from "@mantine/core";
 
 export default function Dashboard() {
   return (

@@ -1,7 +1,7 @@
 import { SimpleGrid, Image, Modal } from '@mantine/core';
 import { useState } from 'react';
 
-const images = ["/x.jpg", "/y.jpg", "/z.jpg", "/y.jpg", "/z.jpg", "/y.jpg", "/z.jpg", "/y.jpg", "/z.jpg", "/y.jpg", "/z.jpg"];
+const images = ["/x.jpg", "/y.jpg", "/z.jpg", "/a.jpg", "/b.jpg", "/c.jpg", "/x.jpg", "/y.jpg", "/z.jpg", "/a.jpg", "/b.jpg"];
 
 export default function GalleryWithModal() {
   const [opened, setOpened] = useState(false);
@@ -13,7 +13,7 @@ export default function GalleryWithModal() {
         {active && <Image src={active} />}
       </Modal>
 
-      <SimpleGrid cols={{ base: 2, sm: 3 }} spacing="md">
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
         {images.map((src, i) => (
           <Image
             key={i}

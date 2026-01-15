@@ -46,10 +46,10 @@ export default function Home() {
             alignItems: "center", // vertical center text
           }}
         >
-          <Text c="white" ta="center">
+          <Text c="white" ta="center" style={{ fontFamily: 'Noto Sans Caucasian Albanian, sans-serif' }}>
             — Unfold the sensibility between light and shadow, breathe beneath
             water and air, sink into tranquility and ambience, and wander along
-            with architecture and poetry.
+            with architecture and poetry. --𐕗𐕘𐕙𐔷𐔸𐔹𐔺 𐔻𐔼𐔽𐕌𐕍𐕎𐕏 𐕂𐕃𐕄𐕅𐕆𐕇𐕈 𐔰𐔱𐔲𐔳𐔴𐔵𐔶 𐕡𐕢𐕣𐔾𐔿𐕀𐕁 𐕉𐕊𐕋𐕚𐕛𐕜𐕝
           </Text>
         </Box>
       </Center>

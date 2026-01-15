@@ -23,6 +23,7 @@ const theme = createTheme({
     myColor,
   },
   primaryColor: 'myColor',
+  fontFamily: 'Sabon, Icons',
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
